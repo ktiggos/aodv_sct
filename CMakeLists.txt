@@ -5,20 +5,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(aodv_s1
+add_executable(demo_aodv_sc
+	src/demo_aodv_sc.cpp
+	src/vcu.cpp
 	src/sc_s1.cpp
-)
-
-target_include_directories(aodv_s1
-	PRIVATE
-	${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-add_executable(aodv_s2
 	src/sc_s2.cpp
 )
 
-target_include_directories(aodv_s2
+target_include_directories(demo_aodv_sc
 	PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 )
