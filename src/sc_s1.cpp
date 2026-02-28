@@ -34,7 +34,7 @@ void SupervisorS1::state_transition(const Event& ev){
 	}
 }
 
-std::string SupervisorS1::getStateName(const State st) const {
+std::string SupervisorS1::get_state_name(const State st) const {
 	switch (st) {
         	case State::qs1: return "qs1";
         	case State::qs2: return "qs2";
@@ -42,13 +42,13 @@ std::string SupervisorS1::getStateName(const State st) const {
     	return "unknown";
 }
 
-std::string SupervisorS1::getState() const {
-	return this->getStateName(this->st_);
+std::string SupervisorS1::get_state() const {
+	return this->get_state_name(this->st_);
 };
 
 int main(int argc, char* argv[]){
 	uint8_t node{1};
 	SupervisorS1 s1(node);
-	std::cout<<s1.getState()<<"\n";
+	std::cout<<s1.get_state()<<"\n";
 	return 0;
 }

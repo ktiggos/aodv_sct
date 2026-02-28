@@ -5,7 +5,7 @@
 class SupervisorS1 {
 	public:
 		explicit SupervisorS1(uint8_t node);
-		std::string getState() const;
+		std::string get_state() const;
 	private:
 		enum class State : uint8_t {
                         qs1,
@@ -13,7 +13,7 @@ class SupervisorS1 {
                 };
 
 		void state_transition(const Event& ev);
-		std::string getStateName(const State st) const;
+		std::string get_state_name(const State st) const;
 
 		uint8_t node_;
 		State st_{State::qs1};
