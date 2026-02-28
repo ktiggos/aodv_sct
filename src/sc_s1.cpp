@@ -48,7 +48,16 @@ void SupervisorS1::send_event(const Event& ev) {
 
 int main(int argc, char* argv[]){
 	uint8_t node{1};
+
+	Event ev;
+	ev.node = 1;
+	ev.id = EvId::e1;
+	
 	SupervisorS1 s1(node);
+
 	std::cout<<s1.get_state()<<"\n";
+	s1.send_event(ev);
+	std::cout<<s1.get_state()<<"\n";
+
 	return 0;
 }
