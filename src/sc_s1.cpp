@@ -40,7 +40,11 @@ std::string SupervisorS1::get_state_name(const State st) const {
 
 std::string SupervisorS1::get_state() const {
 	return this->get_state_name(this->st_);
-};
+}
+
+void SupervisorS1::send_event(const Event& ev) {
+        this->state_transition(ev);
+}
 
 int main(int argc, char* argv[]){
 	uint8_t node{1};
