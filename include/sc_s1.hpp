@@ -6,6 +6,7 @@ class SupervisorS1 {
 	public:
 		explicit SupervisorS1(uint8_t node);
 		std::string get_state() const;
+		void send_event(const Event& ev);
 	private:
 		enum class State : uint8_t {
                         qs1,
