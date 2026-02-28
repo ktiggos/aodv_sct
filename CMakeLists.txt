@@ -13,3 +13,12 @@ target_include_directories(aodv_s1
 	PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 )
+
+add_executable(aodv_s2
+	src/sc_s2.cpp
+)
+
+target_include_directories(aodv_s2
+	PRIVATE
+	${CMAKE_CURRENT_SOURCE_DIR}/include
+)
