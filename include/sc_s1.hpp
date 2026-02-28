@@ -1,4 +1,6 @@
+#pragma once
 #include "events.hpp"
+#include <string>
 
 class SupervisorS1 {
 	public:
