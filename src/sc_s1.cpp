@@ -2,11 +2,7 @@
 #include <iostream>
 
 SupervisorS1::SupervisorS1(uint8_t node) : node_(node) {
-	std::cout<<"super1 created, node "<<(int)node_<<"\n";
-	Event ev;
-	ev.node = 1;
-	ev.id = EvId::e1;
-	this->state_transition(ev);
+	std::cout<<"Node "<<(int)node_<<" - S1 Created"<<"\n";
 }
 
 void SupervisorS1::state_transition(const Event& ev){
