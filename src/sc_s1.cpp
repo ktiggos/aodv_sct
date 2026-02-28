@@ -49,5 +49,6 @@ std::string SupervisorS1::getState() const {
 int main(int argc, char* argv[]){
 	uint8_t node{1};
 	SupervisorS1 s1(node);
+	std::cout<<s1.getState()<<"\n";
 	return 0;
 }
