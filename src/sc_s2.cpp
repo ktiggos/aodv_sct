@@ -44,18 +44,3 @@ void SupervisorS2::send_event(const Event& ev) {
         this->state_transition(ev);
 }
 
-int main(int argc, char* argv[]){
-        uint8_t node{1};
-
-        Event ev;
-        ev.node = 2;
-        ev.id = EvId::e4;
-
-        SupervisorS2 s2(node);
-
-        std::cout<<s2.get_state()<<"\n";
-        s2.send_event(ev);
-        std::cout<<s2.get_state()<<"\n";
-
-        return 0;
-}
