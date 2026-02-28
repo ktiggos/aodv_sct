@@ -1,5 +1,4 @@
-#include "supervisor_s1.hpp"
-
+#include "sc_s1.hpp"
 #include <iostream>
 
 SupervisorS1::SupervisorS1(uint8_t node) : node_(node) {
