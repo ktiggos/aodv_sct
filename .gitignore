@@ -4,3 +4,6 @@ build/
 *.so
 *.out
 *.exe
+
+out/
+*.json
