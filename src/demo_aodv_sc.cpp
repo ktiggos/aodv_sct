@@ -9,6 +9,10 @@
 
 typedef VirtualControlUnit VCU;
 
+Event get_event(const nlohmann::json ev_json){
+	return Event{ev_json["node"], ev_json["evid"]};
+};
+
 int main(int argc, char* argv[]) {
 	VCU units[3] = {VCU(1), VCU(2), VCU(3)};
 
