@@ -12,7 +12,7 @@ class VirtualControlUnit {
 		};
 		explicit VirtualControlUnit(uint8_t node);
 		void send_event(const Event& ev);
-		StatesSC get_sc_states();
+		StatesSC get_sc_states() const;
 	private:
 		uint8_t node_;
 		SupervisorS1 s1_;

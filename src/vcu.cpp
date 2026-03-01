@@ -9,7 +9,7 @@ void VirtualControlUnit::send_event(const Event& ev) {
 	this->s2_.send_event(ev);
 }
 
-VirtualControlUnit::StatesSC VirtualControlUnit::get_sc_states() {
+VirtualControlUnit::StatesSC VirtualControlUnit::get_sc_states() const {
 	return StatesSC{
 		this->s1_.get_state(),
 		this->s2_.get_state()
