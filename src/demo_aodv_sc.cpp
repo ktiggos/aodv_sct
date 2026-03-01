@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 	};
 
 	nlohmann::json ev_seq;
-	file >> ev_seq;`
+	file >> ev_seq;
 
 	return 0;
 }
