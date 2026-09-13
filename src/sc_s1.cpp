@@ -1,8 +1,12 @@
 #include "sc_s1.hpp"
 #include <iostream>
 
-SupervisorS1::SupervisorS1(uint8_t node) : node_(node) {
-	std::cout<<"Node "<<(int)node_<<" - S1 Created"<<"\n";
+SupervisorS1::SupervisorS1(uint8_t node) : Supervisor(node) {
+	this->init_super();
+}
+
+void SupervisorS1::init_super() {
+	std::cout<<"Node "<<(int)this->node_<<" - S1 Created"<<"\n";
 }
 
 void SupervisorS1::state_transition(const Event& ev){
@@ -28,21 +32,5 @@ void SupervisorS1::state_transition(const Event& ev){
 			};
 			break;
 	}
-}
-
-std::string SupervisorS1::get_state_name(const State st) const {
-	switch (st) {
-        	case State::qs1: return "qs1";
-        	case State::qs2: return "qs2";
-    	}
-    	return "unknown";
-}
-
-std::string SupervisorS1::get_state() const {
-	return this->get_state_name(this->st_);
-}
-
-void SupervisorS1::send_event(const Event& ev) {
-        this->state_transition(ev);
 }
 
