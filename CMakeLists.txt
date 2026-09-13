@@ -12,6 +12,7 @@ add_executable(demo_aodv_sc
 	src/vcu.cpp
 	src/sc_s1.cpp
 	src/sc_s2.cpp
+	src/supervisor.cpp
 )
 
 target_include_directories(demo_aodv_sc
