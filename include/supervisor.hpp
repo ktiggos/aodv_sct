@@ -15,8 +15,8 @@ class Supervisor {
         };
         std::string get_state_name(const State st) const;
         
-        virtual void state_transition(const Event& ev);
-        virtual void init_super();
+        virtual void state_transition(const Event& ev) {};
+        virtual void init_super() {};
 
         uint8_t node_;
         State st_{State::qs1};
